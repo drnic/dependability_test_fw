@@ -26,7 +26,7 @@ Vagrant.configure('2') do |config|
 
     # persistent storage for DRBD
 
-    n1_config.persistent_storage.location = "~/development/sourcehdd.vdi"
+    n1_config.persistent_storage.location = "disks/sourcehdd.vdi"
     n1_config.persistent_storage.size = 5000
 
     n1_config.vm.provision :puppet do |n1_puppet|
@@ -59,7 +59,7 @@ Vagrant.configure('2') do |config|
     #n2_config.vm.synced_folder "share/", "/share"
 
     # persistent storage for DRBD
-    n2_config.persistent_storage.location = "~/development/sourcehdd2.vdi"
+    n2_config.persistent_storage.location = "disks/sourcehdd2.vdi"
     n2_config.persistent_storage.size = 5000
 
     n2_config.vm.provision :puppet do |n2_puppet|
